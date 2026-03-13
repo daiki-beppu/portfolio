@@ -62,15 +62,18 @@
 
 ## 注力分野・個人活動
 
+詳細は [個人プロジェクト](./personal-projects.md) を参照。
+
 ### AI / LLM 活用
 
-- Claude Code を日常の開発ワークフローに組み込み
-- Claude Code のカスタムスキルを自作
+- Claude Code を日常の開発ワークフローに統合（業務 + 個人）
+- カスタムスキルの自作・社内展開（業務用 + YouTube 自動運用用 計30以上）
+- AI API を組み合わせた YouTube チャンネル自動運用システムの構築（SunoAI / Gemini / Veo）
 
-### 開発環境の最適化
+### 開発ツール
 
-- Nix による再現性のある開発環境構築
-- dotfiles の整備・管理
+- **specv**: ローカル Markdown プレビュー CLI ツールを開発・npm 公開（React 19 + Hono）
+- **dotfiles**: Nix (nix-darwin + Home Manager) による宣言的な macOS 環境管理
 
 ---
 

@@ -160,13 +160,16 @@ Button を `label` props で設計 → アイコン追加で拡張困難に。�
 
 ## 注力分野・個人活動
 
+詳細は [個人プロジェクト](./personal-projects.md) を参照。
+
 ### AI / LLM 活用
 - Claude Code を日常の開発ワークフローに統合
 - カスタムスキル（プラグイン）の自作・社内展開
+- YouTube チャンネル自動運用システムの構築（Python + SunoAI / Gemini / Veo / YouTube API）
 
-### 開発環境の最適化
-- Nix による再現性のある開発環境構築
-- dotfiles の体系的な管理
+### 開発ツール
+- **specv**: ローカル Markdown プレビュー CLI を開発・npm 公開（TypeScript / React 19 / Hono）
+- **dotfiles**: nix-darwin + Home Manager による macOS 環境の宣言的管理
 
 ---
 
