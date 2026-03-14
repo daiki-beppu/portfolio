@@ -20,7 +20,7 @@
 
 ---
 
-### プロジェクト 1. BtoB 顧客・案件管理 SaaS
+### プロジェクト 1. BtoB 顧客・案件管理 Web アプリ（既存 Windows App の Web 化）
 
 **期間**: 2025年2月〜現在 | **体制**: PM + FE（自分）+ BE 1人
 **技術スタック**: TypeScript / React / Next.js (App Router) / Tailwind CSS / shadcn/ui / TanStack Query / TanStack Table / Drizzle ORM
