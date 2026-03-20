@@ -114,7 +114,7 @@ Vite+ により `vp dev` / `vp build` / `vp check` / `vp test` で開発・ビ�
 ## i18n 設計
 
 - `react-i18next` を使用
-- 翻訳ファイルは `src/locales/ja.json` と `src/locales/en.json`
+- 翻訳ファイルは `src/i18n/ja.json` と `src/i18n/en.json`（i18n 設定と同ディレクトリに配置）
 - フォールバック言語: 日本語
 - **言語判定の優先順位**: localStorage（過去の選択）→ `navigator.language`（ブラウザ設定）→ 日本語（フォールバック）
 - ヘッダーのボタンで手動切替可能
@@ -139,7 +139,8 @@ src/
 │       ├── Projects.tsx
 │       ├── Career.tsx
 │       └── Skills.tsx
-├── locales/
+├── i18n/
+│   ├── config.ts
 │   ├── ja.json
 │   └── en.json
 ├── App.tsx
