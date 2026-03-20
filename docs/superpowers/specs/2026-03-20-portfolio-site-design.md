@@ -19,13 +19,15 @@
 
 | カテゴリ | 技術 |
 |---|---|
-| ビルドツール | Vite |
+| ツールチェーン | Vite+（Vite / Vitest / Oxlint / Oxfmt を統合管理） |
 | フレームワーク | React |
 | 言語 | TypeScript |
 | スタイリング | Tailwind CSS |
 | i18n | react-i18next |
 | アニメーション | framer-motion（控えめなスクロールアニメーション） |
 | デプロイ | Cloudflare Pages（無料枠） |
+
+Vite+ により `vp dev` / `vp build` / `vp check` / `vp test` で開発・ビルド・リント・フォーマット・テストを一元管理。ESLint / Prettier の個別設定は不要。
 
 ## デザイン方針
 
@@ -148,6 +150,6 @@ src/
 ## デプロイ
 
 - Cloudflare Pages に静的サイトとしてデプロイ
-- ビルドコマンド: `vite build`
+- ビルドコマンド: `vp build`
 - 出力ディレクトリ: `dist`
 - GitHub リポジトリと連携し、`main` ブランチへのプッシュで自動デプロイ
