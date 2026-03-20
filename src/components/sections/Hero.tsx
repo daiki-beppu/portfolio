@@ -10,7 +10,7 @@ export function Hero() {
       <img
         src="https://avatars.githubusercontent.com/u/140964131?v=4"
         alt={t("hero.name")}
-        className="w-20 h-20 rounded-full border-2 border-border-hover mb-6"
+        className="w-[200px] h-[200px] rounded-full border-2 border-border-hover mb-6"
       />
       <p className="text-xs tracking-[4px] uppercase text-subtle mb-4">{t("hero.role")}</p>
       <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">{t("hero.name")}</h1>
