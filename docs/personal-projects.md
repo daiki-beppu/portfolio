@@ -10,10 +10,10 @@ AI を活用した YouTube チャンネルの企画→制作→投稿→分析�
 
 ### 運用チャンネル
 
-| チャンネル | ジャンル | 状態 |
-| --- | --- | --- |
-| Celtic Lore Music | ケルト風ファンタジー音楽 | 稼働中（14コレクション公開済み） |
-| 8-Bit Adventure Hub | チップチューン/8bit RPG 音楽 | 準備中 |
+| チャンネル          | ジャンル                     | 状態                             |
+| ------------------- | ---------------------------- | -------------------------------- |
+| Celtic Lore Music   | ケルト風ファンタジー音楽     | 稼働中（14コレクション公開済み） |
+| 8-Bit Adventure Hub | チップチューン/8bit RPG 音楽 | 準備中                           |
 
 ### 自動化パイプライン（8ステップ）
 
@@ -92,14 +92,14 @@ macOS の開発環境全体を nix-darwin + Home Manager で宣言的に管理�
 
 ### 管理対象
 
-| レイヤー | 管理内容 | 管理方法 |
-| --- | --- | --- |
-| Nix (nixpkgs) | CLI ツール（git, gh, ffmpeg, uv, Python 3.14 等） | `flake.nix` home.packages |
-| Nix (programs) | Git 設定（.gitconfig, .gitignore） | Home Manager |
-| Nix (system.defaults) | macOS 設定（Dock, Finder, キーボード, トラックパッド） | nix-darwin |
-| Homebrew (brews) | nixpkgs にないツール（ni, proto, turso） | `flake.nix` homebrew.brews |
-| Homebrew (casks) | GUI アプリ（Arc, Claude, Cursor, Figma 等） | `flake.nix` homebrew.casks |
-| Home Manager | シンボリンク（.zshrc, .claude/ → dotfiles repo） | home.activation |
+| レイヤー              | 管理内容                                               | 管理方法                   |
+| --------------------- | ------------------------------------------------------ | -------------------------- |
+| Nix (nixpkgs)         | CLI ツール（git, gh, ffmpeg, uv, Python 3.14 等）      | `flake.nix` home.packages  |
+| Nix (programs)        | Git 設定（.gitconfig, .gitignore）                     | Home Manager               |
+| Nix (system.defaults) | macOS 設定（Dock, Finder, キーボード, トラックパッド） | nix-darwin                 |
+| Homebrew (brews)      | nixpkgs にないツール（ni, proto, turso）               | `flake.nix` homebrew.brews |
+| Homebrew (casks)      | GUI アプリ（Arc, Claude, Cursor, Figma 等）            | `flake.nix` homebrew.casks |
+| Home Manager          | シンボリンク（.zshrc, .claude/ → dotfiles repo）       | home.activation            |
 
 ### Claude Code のカスタマイズ
 
@@ -114,6 +114,22 @@ Claude Code の設定・スキルもすべて dotfiles で Git 管理:
 - `darwin-rebuild switch` 一発で環境全体を再現可能
 - macOS のシステム設定（ダークモード、キーリピート速度、トラックパッド挙動等）も宣言的に管理
 - Claude Code のワークフロー自体をコード化・バージョン管理
+
+---
+
+## 4. リベ大フェス2025 — 子供向けプログラミング教室の出店
+
+幕張メッセで開催されたリベ大フェス2025にて、親子向けプログラミング × 光る動くおもちゃ作りワークショップ（M-14）にメインメンバーとして参加。
+
+### 担当範囲
+
+- **LP サイトの開発**: イベント告知用の LP を構築・デプロイ（https://02-ribe-booth-lp.vercel.app/）
+- **ワークショップの講師**: 子供たちにプログラミングを教えるメインメンバーとして参加
+- **物販運営**: グッズ物販を企画・運営し、黒字化を達成
+
+### 意義
+
+業務や個人開発とは異なるアウトプット。技術を「教える」「伝える」経験、イベント運営・物販という非エンジニアリング領域での実績。
 
 ---
 
