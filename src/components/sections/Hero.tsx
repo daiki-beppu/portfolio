@@ -13,9 +13,9 @@ export function Hero() {
         {t("hero.tagline")}
       </p>
       <div className="flex gap-4">
-        <SocialIcon href="https://github.com/YOUR_USERNAME" icon={Github} label="GitHub" />
-        <SocialIcon href="https://x.com/YOUR_USERNAME" icon={Twitter} label="X" />
-        <SocialIcon href="mailto:your@email.com" icon={Mail} label="Email" />
+        <SocialIcon href="https://github.com/daiki-beppu" icon={Github} label="GitHub" />
+        <SocialIcon href="https://x.com/momochico_eng" icon={Twitter} label="X" />
+        <SocialIcon href="mailto:beppu.engineer@gmail.com" icon={Mail} label="Email" />
       </div>
     </section>
   );

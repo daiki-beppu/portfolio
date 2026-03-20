@@ -7,7 +7,7 @@
   },
   "hero": {
     "role": "Frontend Engineer",
-    "name": "名前",
+    "name": "別府 大貴",
     "tagline": "チームの生産性を底上げする\nフロントエンドエンジニア"
   },
   "about": {
@@ -67,6 +67,6 @@
     "sub": "Sub"
   },
   "footer": {
-    "copyright": "© 2026 名前"
+    "copyright": "© 2026 別府 大貴"
   }
 }

@@ -7,7 +7,7 @@
   },
   "hero": {
     "role": "Frontend Engineer",
-    "name": "Name",
+    "name": "Daiki Beppu",
     "tagline": "Frontend engineer focused on\nteam productivity"
   },
   "about": {
@@ -67,6 +67,6 @@
     "sub": "Sub"
   },
   "footer": {
-    "copyright": "© 2026 Name"
+    "copyright": "© 2026 Daiki Beppu"
   }
 }
