@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "career": "Career",
+    "skills": "Skills"
+  },
+  "hero": {
+    "role": "Frontend Engineer",
+    "name": "Name",
+    "tagline": "Frontend engineer focused on\nteam productivity"
+  },
+  "about": {
+    "label": "About",
+    "p1": "Transitioned from construction work to software engineering through self-study. Built FE foundations for BtoB business apps within 1.5 years.",
+    "p2": "Passionate about improving team productivity through DX improvements and AI tool adoption, not just individual output.",
+    "p3": "Continuously exploring technology outside of work — YouTube automation systems, npm packages, and more."
+  },
+  "projects": {
+    "label": "Projects",
+    "youtube": {
+      "title": "YouTube Auto System",
+      "description": "Fully automated pipeline: planning → production → upload → analytics with AI"
+    },
+    "specv": {
+      "title": "specv",
+      "description": "Markdown preview CLI — published on npm"
+    },
+    "dotfiles": {
+      "title": "dotfiles",
+      "description": "Declarative macOS environment management with Nix"
+    },
+    "libefes": {
+      "title": "LibeFes 2025",
+      "description": "Kids programming workshop at Makuhari Messe"
+    }
+  },
+  "career": {
+    "label": "Career",
+    "company": "BtoB SaaS Startup — Oct 2024 – Present",
+    "pj3": {
+      "period": "Oct 2025 — Present",
+      "title": "Business Management Web App (Greenfield)",
+      "description": "Designed and built the entire FE from scratch. Applied all learnings from previous projects."
+    },
+    "pj2": {
+      "period": "Aug 2025 — Present",
+      "title": "Business Management Multi-App (3-App Integration)",
+      "description": "Resolved 100+ feedback items. Completed monorepo migration + major upgrades in 1 month with AI."
+    },
+    "pj1": {
+      "period": "Feb 2025 — Present",
+      "title": "BtoB Business Management Web App (jQuery → Next.js)",
+      "description": "Designed and built a large-scale form with 52 fields. Bidirectional state sync between tabs."
+    },
+    "origin": {
+      "period": "— 2024",
+      "title": "Construction Worker → Self-taught Engineer",
+      "description": "Self-taught via YouTube, Udemy, and personal projects."
+    }
+  },
+  "skills": {
+    "label": "Skills",
+    "frontend": "Frontend",
+    "testing": "Testing",
+    "infra": "Infra / Tools",
+    "sub": "Sub"
+  },
+  "footer": {
+    "copyright": "© 2026 Name"
+  }
+}

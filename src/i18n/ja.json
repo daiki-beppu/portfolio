@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "career": "Career",
+    "skills": "Skills"
+  },
+  "hero": {
+    "role": "Frontend Engineer",
+    "name": "名前",
+    "tagline": "チームの生産性を底上げする\nフロントエンドエンジニア"
+  },
+  "about": {
+    "label": "About",
+    "p1": "鳶職から完全独学でエンジニアに転職。約1年半で BtoB 業務アプリの FE 基盤を設計・構築できるようになりました。",
+    "p2": "個人の実装力だけでなく、DX 改善・AI ツールの社内展開など、チーム全体の生産性を底上げすることに最もやりがいを感じています。",
+    "p3": "業務外でも YouTube 自動運用システムや npm パッケージの公開など、技術的な探求を続けています。"
+  },
+  "projects": {
+    "label": "Projects",
+    "youtube": {
+      "title": "YouTube 自動運用システム",
+      "description": "AI で企画→制作→投稿→分析を完全自動化"
+    },
+    "specv": {
+      "title": "specv",
+      "description": "Markdown プレビュー CLI — npm 公開済み"
+    },
+    "dotfiles": {
+      "title": "dotfiles",
+      "description": "Nix ベース macOS 環境の宣言的管理"
+    },
+    "libefes": {
+      "title": "リベ大フェス2025",
+      "description": "子供向けプログラミング教室の出店"
+    }
+  },
+  "career": {
+    "label": "Career",
+    "company": "BtoB SaaS スタートアップ — 2024.10〜現在",
+    "pj3": {
+      "period": "2025.10 — 現在",
+      "title": "業務管理 Web アプリ（ゼロベース新規構築）",
+      "description": "FE 全体をゼロから一人で設計・構築。過去2プロジェクトの学びをすべて反映した設計。"
+    },
+    "pj2": {
+      "period": "2025.08 — 現在",
+      "title": "業務管理マルチアプリ（3アプリ統合）",
+      "description": "100件超のフィードバック対応。モノレポ化 + 大規模マイグレーションを AI 活用で1ヶ月完了。"
+    },
+    "pj1": {
+      "period": "2025.02 — 現在",
+      "title": "BtoB 業務管理 Web アプリ（jQuery → Next.js）",
+      "description": "52フィールドの大規模フォーム設計・実装。タブ間双方向状態同期。"
+    },
+    "origin": {
+      "period": "— 2024",
+      "title": "鳶職 → 独学でエンジニア転職",
+      "description": "YouTube・Udemy 等の動画教材 + 個人開発で独学。"
+    }
+  },
+  "skills": {
+    "label": "Skills",
+    "frontend": "Frontend",
+    "testing": "Testing",
+    "infra": "Infra / Tools",
+    "sub": "Sub"
+  },
+  "footer": {
+    "copyright": "© 2026 名前"
+  }
+}
