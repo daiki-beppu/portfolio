@@ -2,18 +2,19 @@ type Props = {
   title: string;
   description: string;
   tags: string[];
-  href: string;
+  href?: string;
   icon: string;
   gradient: string;
 };
 
 export function ProjectCard({ title, description, tags, href, icon, gradient }: Props) {
+  const Component = href ? "a" : "div";
+  const linkProps = href ? { href, target: "_blank" as const, rel: "noopener noreferrer" } : {};
+
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block bg-card border border-border rounded-lg overflow-hidden hover:border-border-hover hover:-translate-y-0.5 transition-all"
+    <Component
+      {...linkProps}
+      className={`group block bg-card border border-border rounded-lg overflow-hidden ${href ? "hover:border-border-hover hover:-translate-y-0.5 cursor-pointer" : "opacity-90"} transition-all`}
     >
       <div
         className="h-32 flex items-center justify-center text-4xl"
@@ -34,6 +35,6 @@ export function ProjectCard({ title, description, tags, href, icon, gradient }: 
           ))}
         </div>
       </div>
-    </a>
+    </Component>
   );
 }

@@ -2,7 +2,7 @@ export type Project = {
   titleKey: string;
   descriptionKey: string;
   tags: string[];
-  href: string;
+  href?: string;
   icon: string;
   gradient: string;
 };
@@ -12,7 +12,6 @@ export const projects: Project[] = [
     titleKey: "projects.youtube.title",
     descriptionKey: "projects.youtube.description",
     tags: ["Python", "AI API", "YouTube API"],
-    href: "https://github.com/daiki-beppu/youtube-automation",
     icon: "🎵",
     gradient: "linear-gradient(135deg, #1a1a2e, #16213e)",
   },
