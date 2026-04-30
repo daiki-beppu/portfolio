@@ -6,7 +6,8 @@ React + Vite Plus で構築した個人ポートフォリオサイト。
 
 - `nr dev` — 開発サーバー起動
 - `nr build` — プロダクションビルド（`tsc -b && vp build`）
-- `nr lint` — ESLint 実行
+- `nr lint` — Lint 実行（`vp lint`）
+- `nr check` — フォーマット / Lint / 型チェックを一括実行（`vp check`、pre-commit でも実行）
 
 ## 構成
 
