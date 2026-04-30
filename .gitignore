@@ -9,3 +9,10 @@ dist/
 !.dev.vars.example
 .env*
 !.env.example
+
+# 転職活動の機微ファイル（公開リポジトリのため private に維持）
+/career/activity-plan.md
+/career/company-targets.md
+/career/elevator-pitch.md
+/career/platform-profiles.md
+/career/companies/*/
