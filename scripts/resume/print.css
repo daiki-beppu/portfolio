@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  font-feature-settings: "palt";
+  line-height: 1.6;
+  word-break: break-word;
+  orphans: 3;
+  widows: 3;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media screen {
+  body {
+    max-width: 210mm;
+    margin: 2rem auto;
+    padding: 18mm 14mm;
+    background: #f1f5f9;
+  }
+  main {
+    background: #fff;
+    padding: 16mm 14mm;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+    border-radius: 4px;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    font-size: 9.5pt;
+  }
+  main {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* 改ページマーカー: Markdown で <div class="page-break"></div> を置いた位置で改ページ */
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+    height: 0;
+  }
+
+  /* 改ページ前ページ末尾に水平線が残るのを防ぐ */
+  hr {
+    display: none;
+  }
+
+  /* 印刷時はリンクの URL を控えめに展開 */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    color: #6b7280;
+    word-break: break-all;
+  }
+}
+
+h1 {
+  font-size: 18pt;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.2em 0 0.9em;
+  padding: 0.2em 0 0.4em;
+  border-bottom: 2.5px solid #1f2937;
+  letter-spacing: 0.06em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 12.5pt;
+  font-weight: 700;
+  margin: 1em 0 0.45em;
+  padding: 0.3em 0.7em;
+  background: #eef2f7;
+  border-left: 4px solid #1f2937;
+  letter-spacing: 0.04em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.85em 0 0.3em;
+  padding-left: 0.55em;
+  border-left: 3px solid #94a3b8;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 10pt;
+  font-weight: 700;
+  color: #374151;
+  margin: 0.7em 0 0.2em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h2 + *,
+h3 + *,
+h4 + * {
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
+p {
+  margin: 0.35em 0;
+}
+
+ul,
+ol {
+  margin: 0.35em 0;
+  padding-left: 1.5em;
+  break-inside: avoid;
+}
+
+li {
+  margin: 0.1em 0;
+}
+
+li::marker {
+  color: #64748b;
+}
+
+strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 0.9em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0.5em 0;
+  font-size: 9pt;
+  break-inside: auto;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tbody tr {
+  break-inside: avoid;
+}
+
+th,
+td {
+  padding: 4px 8px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  line-height: 1.5;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+th {
+  background: #1f2937;
+  color: #f9fafb;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+blockquote {
+  margin: 0.5em 0;
+  padding: 0.4em 0.85em;
+  background: #f8fafc;
+  border-left: 3px solid #94a3b8;
+  color: #334155;
+  break-inside: avoid;
+  border-radius: 0 3px 3px 0;
+}
+
+code {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 8.5pt;
+  background: #f1f5f9;
+  padding: 0.05em 0.35em;
+  border-radius: 3px;
+  color: #0f172a;
+}
+
+pre {
+  background: #f1f5f9;
+  padding: 0.6em 0.8em;
+  border-radius: 3px;
+  font-size: 8.5pt;
+  line-height: 1.45;
+  overflow-x: auto;
+  break-inside: avoid;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.resume-header {
+  margin-bottom: 1em;
+}
+
+.resume-header table {
+  margin: 0;
+}
+
+.resume-header th {
+  width: 22%;
+  white-space: nowrap;
+  background: #f3f4f6;
+  color: #1f2937;
+}

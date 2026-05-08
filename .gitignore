@@ -15,4 +15,8 @@ dist/
 /career/company-targets.md
 /career/elevator-pitch.md
 /career/platform-profiles.md
+/career/resume.md
 /career/companies/*/
+
+# 履歴書・職務経歴書の出力先
+/dist-resume/
