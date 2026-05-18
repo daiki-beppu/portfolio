@@ -8,6 +8,7 @@ React + Vite Plus で構築した個人ポートフォリオサイト。
 - `nr build` — プロダクションビルド（`tsc -b && vp build`）
 - `nr lint` — Lint 実行（`vp lint`）
 - `nr check` — フォーマット / Lint / 型チェックを一括実行（`vp check`、pre-commit でも実行）
+- `nr resume:build` — 履歴書・職務経歴書を `dist-resume/` に HTML/PDF でエクスポート（`--html-only` で PDF スキップ）
 
 ## 構成
 

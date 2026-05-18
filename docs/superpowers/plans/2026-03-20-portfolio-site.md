@@ -48,6 +48,7 @@ src/
 ```
 
 **設計判断:**
+
 - `data/` ディレクトリにコンテンツデータを分離。コンポーネントとデータの責務を分け、i18n 翻訳キーもここで定義
 - `ui/` に再利用可能な小さいコンポーネントを配置。セクションコンポーネントはこれらを組み合わせるだけ
 - `hooks/` にスクロール等のロジックを分離
@@ -57,6 +58,7 @@ src/
 ## Task 1: プロジェクト初期化（Vite+ セットアップ）
 
 **Files:**
+
 - Create: `package.json`, `tsconfig.json`, `vite.config.ts`, `src/main.tsx`, `src/App.tsx`, `src/index.css`, `index.html`
 
 - [ ] **Step 1: Vite+ で React + TypeScript プロジェクトを作成**
@@ -129,7 +131,10 @@ ni react-i18next i18next i18next-browser-languagedetector framer-motion lucide-r
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 ```
 
@@ -165,6 +170,7 @@ git commit -m "feat: Vite+ でプロジェクト初期化（React + TypeScript +
 ## Task 2: i18n セットアップ
 
 **Files:**
+
 - Create: `src/i18n/config.ts`, `src/i18n/ja.json`, `src/i18n/en.json`
 - Modify: `src/main.tsx`
 
@@ -268,7 +274,7 @@ import "./index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
 ```
 
@@ -286,7 +292,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground p-8">
-      <button onClick={toggleLanguage} className="mb-4 px-3 py-1 bg-card border border-border rounded text-sm">
+      <button
+        onClick={toggleLanguage}
+        className="mb-4 px-3 py-1 bg-card border border-border rounded text-sm"
+      >
         {i18n.language === "ja" ? "EN" : "JA"}
       </button>
       <h1 className="text-2xl font-bold">{t("hero.name")}</h1>
@@ -312,6 +321,7 @@ git commit -m "feat: react-i18next で i18n セットアップ（日英対応）
 ## Task 3: 共通 UI コンポーネント
 
 **Files:**
+
 - Create: `src/components/ui/SectionLabel.tsx`, `src/components/ui/SocialIcon.tsx`, `src/components/ui/SkillTag.tsx`, `src/components/ui/ProjectCard.tsx`, `src/components/ui/TimelineItem.tsx`
 
 - [ ] **Step 1: SectionLabel を実装**
@@ -324,11 +334,7 @@ type Props = {
 };
 
 export function SectionLabel({ children }: Props) {
-  return (
-    <h2 className="text-xs tracking-[4px] uppercase text-subtle mb-6">
-      {children}
-    </h2>
-  );
+  return <h2 className="text-xs tracking-[4px] uppercase text-subtle mb-6">{children}</h2>;
 }
 ```
 
@@ -376,11 +382,7 @@ export function SkillTag({ name, variant = "main" }: Props) {
       ? "bg-tag border-border-hover text-[#ccc]"
       : "bg-card border-border text-muted";
 
-  return (
-    <span className={`px-3.5 py-1.5 rounded-md border text-sm ${styles}`}>
-      {name}
-    </span>
-  );
+  return <span className={`px-3.5 py-1.5 rounded-md border text-sm ${styles}`}>{name}</span>;
 }
 ```
 
@@ -419,10 +421,7 @@ export function ProjectCard({ title, description, tags, href, icon, gradient }: 
         <p className="text-xs text-subtle leading-relaxed mb-2">{description}</p>
         <div className="flex gap-1 flex-wrap">
           {tags.map((tag) => (
-            <span
-              key={tag}
-              className="bg-tag px-1.5 py-0.5 rounded text-[10px] text-muted"
-            >
+            <span key={tag} className="bg-tag px-1.5 py-0.5 rounded text-[10px] text-muted">
               {tag}
             </span>
           ))}
@@ -455,19 +454,14 @@ export function TimelineItem({ period, title, description, tags, dotStyle }: Pro
 
   return (
     <div className="relative pl-6 pb-7 last:pb-0">
-      <div
-        className={`absolute -left-[29px] top-[6px] w-2.5 h-2.5 rounded-full ${dotClass}`}
-      />
+      <div className={`absolute -left-[29px] top-[6px] w-2.5 h-2.5 rounded-full ${dotClass}`} />
       <p className="text-xs text-subtle mb-1">{period}</p>
       <h3 className="text-sm font-semibold mb-1">{title}</h3>
       <p className="text-xs text-subtle leading-relaxed">{description}</p>
       {tags && tags.length > 0 && (
         <div className="flex gap-1 flex-wrap mt-2">
           {tags.map((tag) => (
-            <span
-              key={tag}
-              className="bg-tag px-1.5 py-0.5 rounded text-[10px] text-muted"
-            >
+            <span key={tag} className="bg-tag px-1.5 py-0.5 rounded text-[10px] text-muted">
               {tag}
             </span>
           ))}
@@ -496,6 +490,7 @@ git commit -m "feat: 共通 UI コンポーネントを追加（SectionLabel, So
 ## Task 4: データ定義
 
 **Files:**
+
 - Create: `src/data/projects.ts`, `src/data/career.ts`, `src/data/skills.ts`
 
 - [ ] **Step 1: projects.ts を作成**
@@ -753,6 +748,7 @@ git commit -m "feat: コンテンツデータと翻訳キーを定義"
 ## Task 5: Header コンポーネント
 
 **Files:**
+
 - Create: `src/components/layout/Header.tsx`, `src/hooks/useScrollTo.ts`
 - Modify: `src/App.tsx`
 
@@ -868,10 +864,18 @@ function App() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main className="pt-14">
-        <div id="about" className="h-screen p-8">About</div>
-        <div id="projects" className="h-screen p-8">Projects</div>
-        <div id="career" className="h-screen p-8">Career</div>
-        <div id="skills" className="h-screen p-8">Skills</div>
+        <div id="about" className="h-screen p-8">
+          About
+        </div>
+        <div id="projects" className="h-screen p-8">
+          Projects
+        </div>
+        <div id="career" className="h-screen p-8">
+          Career
+        </div>
+        <div id="skills" className="h-screen p-8">
+          Skills
+        </div>
       </main>
     </div>
   );
@@ -894,6 +898,7 @@ git commit -m "feat: 固定ヘッダーを実装（ナビ + 言語切替 + ハ�
 ## Task 6: Hero セクション
 
 **Files:**
+
 - Create: `src/components/sections/Hero.tsx`
 - Modify: `src/App.tsx`
 
@@ -911,12 +916,8 @@ export function Hero() {
 
   return (
     <section className="min-h-[calc(100vh-3.5rem)] flex flex-col justify-center px-6 max-w-3xl mx-auto">
-      <p className="text-xs tracking-[4px] uppercase text-subtle mb-4">
-        {t("hero.role")}
-      </p>
-      <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">
-        {t("hero.name")}
-      </h1>
+      <p className="text-xs tracking-[4px] uppercase text-subtle mb-4">{t("hero.role")}</p>
+      <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">{t("hero.name")}</h1>
       <p className="text-sm md:text-base text-subtle leading-relaxed mb-6 whitespace-pre-line">
         {t("hero.tagline")}
       </p>
@@ -951,6 +952,7 @@ git commit -m "feat: Hero セクションを実装"
 ## Task 7: About セクション
 
 **Files:**
+
 - Create: `src/components/sections/About.tsx`
 - Modify: `src/App.tsx`
 
@@ -992,6 +994,7 @@ git commit -m "feat: About セクションを実装"
 ## Task 8: Projects セクション
 
 **Files:**
+
 - Create: `src/components/sections/Projects.tsx`
 - Modify: `src/App.tsx`
 
@@ -1045,6 +1048,7 @@ git commit -m "feat: Projects セクションを実装（カードグリッド�
 ## Task 9: Career セクション
 
 **Files:**
+
 - Create: `src/components/sections/Career.tsx`
 - Modify: `src/App.tsx`
 
@@ -1098,6 +1102,7 @@ git commit -m "feat: Career セクションを実装（タイムライン）"
 ## Task 10: Skills セクション
 
 **Files:**
+
 - Create: `src/components/sections/Skills.tsx`
 - Modify: `src/App.tsx`
 
@@ -1150,6 +1155,7 @@ git commit -m "feat: Skills セクションを実装（タグクラウド）"
 ## Task 11: Footer + App.tsx 最終組み立て
 
 **Files:**
+
 - Create: `src/components/layout/Footer.tsx`
 - Modify: `src/App.tsx`
 
@@ -1217,6 +1223,7 @@ git commit -m "feat: Footer + App.tsx 最終組み立て"
 ## Task 12: framer-motion でスクロールアニメーション
 
 **Files:**
+
 - Modify: `src/components/sections/About.tsx`, `src/components/sections/Projects.tsx`, `src/components/sections/Career.tsx`, `src/components/sections/Skills.tsx`
 
 - [ ] **Step 1: 各セクションに framer-motion のフェードインを追加**
@@ -1255,11 +1262,13 @@ git commit -m "feat: framer-motion でスクロールフェードインアニメ
 ## Task 13: ビルド確認 + デプロイ準備
 
 **Files:**
+
 - Modify: `index.html`（title, meta タグ）
 
 - [ ] **Step 1: プレースホルダーを実際の値に置き換え**
 
 以下のファイルで `YOUR_USERNAME` と `your@email.com` を実際の GitHub ユーザー名・メールアドレスに置き換える:
+
 - `src/components/sections/Hero.tsx`: SNS リンク
 - `src/data/projects.ts`: GitHub リポジトリ URL
 - `src/i18n/ja.json` / `src/i18n/en.json`: 名前（`名前` / `Name`）
